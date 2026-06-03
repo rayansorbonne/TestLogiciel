@@ -46,6 +46,8 @@ class WebTests {
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.nombreDeVoitures").value(2))
                 .andExpect(jsonPath("$.prixMoyen").value(15000));
+
+        verify(statistiqueImpl, times(1)).prixMoyen();
     }
 
     @Test
