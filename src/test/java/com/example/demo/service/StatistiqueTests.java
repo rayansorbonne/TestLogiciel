@@ -21,11 +21,12 @@ public class StatistiqueTests {
         StatistiqueImpl statistique = new StatistiqueImpl();
         statistique.ajouter(new Voiture("Renault", 10000));
         statistique.ajouter(new Voiture("Peugeot", 20000));
+        statistique.ajouter(new Voiture("Citroen", 30000));
 
         Echantillon echantillon = statistique.prixMoyen();
 
-        assertEquals(2, echantillon.getNombreDeVoitures());
-        assertEquals(15000, echantillon.getPrixMoyen());
+        assertEquals(3, echantillon.getNombreDeVoitures());
+        assertEquals(20000, echantillon.getPrixMoyen());
     }
 
 }
